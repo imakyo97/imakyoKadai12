@@ -15,7 +15,7 @@ class TaxDataSource: NSObject {
     
     private let taxCalc = "TaxCalc"
     weak var delegate: TaxDataSourceDelegate?
-
+    
     func loadData(didlode: @escaping (Int) -> Void) {
         let userDefaults = UserDefaults.standard
         let taxRate = userDefaults.integer(forKey: taxCalc)

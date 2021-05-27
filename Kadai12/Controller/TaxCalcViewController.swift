@@ -9,12 +9,10 @@ import UIKit
 
 class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxDataSourceDelegate {
     
-    
-    
     private var taxDataSource: TaxDataSource!
-    @IBOutlet weak var taxExcludedTextField: UITextField!
-    @IBOutlet weak var taxRateTextField: UITextField!
-    @IBOutlet weak var taxIncludedLabel: UILabel!
+    @IBOutlet private weak var taxExcludedTextField: UITextField!
+    @IBOutlet private weak var taxRateTextField: UITextField!
+    @IBOutlet private weak var taxIncludedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +23,7 @@ class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxDataSourc
         taxDataSource.loadData {[weak self] in self?.taxRateTextField.text = String($0) }
     }
     
-    @IBAction func tapBtn(_ sender: Any) {
+    @IBAction private func tapBtn(_ sender: Any) {
         guard let taxExcluded = Double(taxExcludedTextField.text!) else { return }
         guard let taxRate = Double(taxRateTextField.text!) else { return }
         let taxIncludedDouble = taxExcluded * (taxRate / 100 + 1)
@@ -34,7 +32,7 @@ class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxDataSourc
         view.endEditing(true)
     }
     
-    @IBAction func tapView(_ sender: Any) {
+    @IBAction private func tapView(_ sender: Any) {
         view.endEditing(true)
     }
     
