@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tax Calc View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TaxCalcViewController" customModule="Kadai12" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="税抜金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN2-py-kqn">
+                                <rect key="frame" x="79" y="99.5" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消費税率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-T6-qQN">
+                                <rect key="frame" x="79" y="142.5" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="税込金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="452-b6-HWE">
+                                <rect key="frame" x="79" y="228" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-Yg-UHs">
+                                <rect key="frame" x="315" y="99.5" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsH-eh-Abx">
+                                <rect key="frame" x="183" y="228" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="OWP-gi-Tvc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjX-gZ-Hrk">
+                                <rect key="frame" x="157" y="93" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="lPX-4n-NVb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGe-fx-keN">
+                                <rect key="frame" x="157" y="136" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="L8m-87-nh6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJp-eN-ggc">
+                                <rect key="frame" x="191.5" y="178" width="31" height="30"/>
+                                <state key="normal" title="計算"/>
+                                <connections>
+                                    <action selector="tapBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XE8-zU-eKb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXO-Eh-SEp">
+                                <rect key="frame" x="317" y="141.5" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ZjX-gZ-Hrk" firstAttribute="centerY" secondItem="PN2-py-kqn" secondAttribute="centerY" id="0Uq-CN-83q"/>
+                            <constraint firstItem="ZjX-gZ-Hrk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="3j3-do-1KR"/>
+                            <constraint firstItem="rJp-eN-ggc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8jK-mq-rhD"/>
+                            <constraint firstItem="rJp-eN-ggc" firstAttribute="top" secondItem="bGe-fx-keN" secondAttribute="bottom" constant="8" symbolic="YES" id="AIr-Cw-60m"/>
+                            <constraint firstItem="dhu-T6-qQN" firstAttribute="leading" secondItem="PN2-py-kqn" secondAttribute="leading" id="OLK-FX-8Xd"/>
+                            <constraint firstItem="bGe-fx-keN" firstAttribute="leading" secondItem="dhu-T6-qQN" secondAttribute="trailing" constant="8" symbolic="YES" id="PIP-b5-o7F"/>
+                            <constraint firstItem="452-b6-HWE" firstAttribute="leading" secondItem="PN2-py-kqn" secondAttribute="leading" id="WdI-Z0-0Ra"/>
+                            <constraint firstItem="rvJ-Yg-UHs" firstAttribute="trailing" secondItem="AsH-eh-Abx" secondAttribute="trailing" id="WhW-0v-mYP"/>
+                            <constraint firstItem="PXO-Eh-SEp" firstAttribute="leading" secondItem="bGe-fx-keN" secondAttribute="trailing" constant="10" id="ZC0-lW-cun"/>
+                            <constraint firstItem="bGe-fx-keN" firstAttribute="centerY" secondItem="dhu-T6-qQN" secondAttribute="centerY" id="ZWL-Ch-Tet"/>
+                            <constraint firstItem="rvJ-Yg-UHs" firstAttribute="leading" secondItem="ZjX-gZ-Hrk" secondAttribute="trailing" constant="8" symbolic="YES" id="arw-Rt-sDM"/>
+                            <constraint firstItem="bGe-fx-keN" firstAttribute="top" secondItem="ZjX-gZ-Hrk" secondAttribute="bottom" constant="9" id="cmb-n5-nRd"/>
+                            <constraint firstItem="ZjX-gZ-Hrk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="25" id="eOt-47-cLI"/>
+                            <constraint firstItem="rvJ-Yg-UHs" firstAttribute="centerY" secondItem="PN2-py-kqn" secondAttribute="centerY" id="gzm-3X-eYW"/>
+                            <constraint firstItem="AsH-eh-Abx" firstAttribute="centerY" secondItem="452-b6-HWE" secondAttribute="centerY" id="mbD-WM-yXd"/>
+                            <constraint firstItem="PXO-Eh-SEp" firstAttribute="centerY" secondItem="dhu-T6-qQN" secondAttribute="centerY" constant="-1" id="mdJ-Hh-cau"/>
+                            <constraint firstItem="AsH-eh-Abx" firstAttribute="top" secondItem="rJp-eN-ggc" secondAttribute="bottom" constant="20" id="uus-S2-efj"/>
+                            <constraint firstItem="ZjX-gZ-Hrk" firstAttribute="leading" secondItem="PN2-py-kqn" secondAttribute="trailing" constant="8" symbolic="YES" id="xli-aH-A9g"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7gC-8x-Vhv" appends="YES" id="c1a-hO-Dok"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="taxExcludedTextField" destination="ZjX-gZ-Hrk" id="N5K-ee-6C8"/>
+                        <outlet property="taxIncludedLabel" destination="AsH-eh-Abx" id="1cY-oP-Fkk"/>
+                        <outlet property="taxRateTextField" destination="bGe-fx-keN" id="zja-ye-KoC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7gC-8x-Vhv">
+                    <connections>
+                        <action selector="tapView:" destination="BYZ-38-t0r" id="CNN-a6-SpX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-133.33333333333334" y="347.54464285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
