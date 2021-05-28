@@ -7,9 +7,11 @@
 
 import UIKit
 
-class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxDataSourceDelegate {
+class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxRateRepositoryDelegate {
     
-    private var taxDataSource: TaxDataSource!
+    private let taxRateRepository = TaxRateRepository()
+    private let priceCalculator = PriceCalculator()
+
     @IBOutlet private weak var taxExcludedTextField: UITextField!
     @IBOutlet private weak var taxRateTextField: UITextField!
     @IBOutlet private weak var taxIncludedLabel: UILabel!
@@ -18,17 +20,21 @@ class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxDataSourc
         super.viewDidLoad()
         
         taxRateTextField.delegate = self
-        taxDataSource = TaxDataSource()
-        taxDataSource.delegate = self
-        taxDataSource.loadData {[weak self] in self?.taxRateTextField.text = String($0) }
+        taxRateRepository.delegate = self
+
+        taxRateRepository.loadData { [weak self] in self?.taxRateTextField.text = String($0) }
     }
     
     @IBAction private func tapBtn(_ sender: Any) {
         guard let taxExcluded = Double(taxExcludedTextField.text!) else { return }
         guard let taxRate = Double(taxRateTextField.text!) else { return }
-        let taxIncludedDouble = taxExcluded * (taxRate / 100 + 1)
-        let taxIncludedInt = Int(round(taxIncludedDouble))
-        taxIncludedLabel.text = "\(taxIncludedInt)円"
+
+        let priceWithTax = priceCalculator.calculatePriceWithTax(
+            priceWithoutTax: Int(taxExcluded),
+            taxRate: taxRate / 100.0
+        )
+
+        taxIncludedLabel.text = "\(priceWithTax)円"
         view.endEditing(true)
     }
     
@@ -40,13 +46,12 @@ class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxDataSourc
     func textFieldDidEndEditing(_ textField: UITextField){
         if textField == taxRateTextField {
             guard let taxRate = Int(textField.text!) else { return }
-            taxDataSource.save(taxRate: taxRate)
+            taxRateRepository.save(taxRate: taxRate)
         }
     }
     
     // MARK: - TaxDataSourceDelegate
-    func didsave(data: Int) {
-            print("UserDafalutsにTaxRate:\(data)が保存されました")
-        }
+    func didSave(data: Int) {
+        print("UserDafalutsにTaxRate:\(data)が保存されました")
+    }
 }
-
