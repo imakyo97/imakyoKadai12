@@ -13,7 +13,8 @@
 		471A5809265DDC320051760C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471A5807265DDC320051760C /* Main.storyboard */; };
 		471A580B265DDC320051760C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471A580A265DDC320051760C /* Assets.xcassets */; };
 		471A580E265DDC320051760C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471A580C265DDC320051760C /* LaunchScreen.storyboard */; };
-		471A581A265DDF220051760C /* TaxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A5819265DDF210051760C /* TaxDataSource.swift */; };
+		471A581A265DDF220051760C /* TaxRateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A5819265DDF210051760C /* TaxRateRepository.swift */; };
+		4782AFA32661134200870DA7 /* PriceCaluculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4782AFA22661134200870DA7 /* PriceCaluculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		471A580A265DDC320051760C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471A580D265DDC320051760C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471A580F265DDC320051760C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		471A5819265DDF210051760C /* TaxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDataSource.swift; sourceTree = "<group>"; };
+		471A5819265DDF210051760C /* TaxRateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxRateRepository.swift; sourceTree = "<group>"; };
+		4782AFA22661134200870DA7 /* PriceCaluculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCaluculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,8 @@
 		471A5816265DDD8D0051760C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				471A5819265DDF210051760C /* TaxDataSource.swift */,
+				471A5819265DDF210051760C /* TaxRateRepository.swift */,
+				4782AFA22661134200870DA7 /* PriceCaluculator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,8 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				471A5806265DDC320051760C /* TaxCalcViewController.swift in Sources */,
+				4782AFA32661134200870DA7 /* PriceCaluculator.swift in Sources */,
 				471A5802265DDC320051760C /* AppDelegate.swift in Sources */,
-				471A581A265DDF220051760C /* TaxDataSource.swift in Sources */,
+				471A581A265DDF220051760C /* TaxRateRepository.swift in Sources */,
 				471A5804265DDC320051760C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
