@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		470E76AF26A5474C00A4C13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470E76AD26A5474C00A4C13A /* Main.storyboard */; };
 		470E76B126A5474D00A4C13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 470E76B026A5474D00A4C13A /* Assets.xcassets */; };
 		470E76B426A5474D00A4C13A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470E76B226A5474D00A4C13A /* LaunchScreen.storyboard */; };
+		470E76BC26A549F800A4C13A /* Tax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E76BB26A549F800A4C13A /* Tax.swift */; };
+		470E76C026A54DA700A4C13A /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E76BF26A54DA700A4C13A /* DataRepository.swift */; };
 		61B24C23BE5307F78F42BA09 /* Pods_Kadai12_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E508D2B0740C1929FBFABC9 /* Pods_Kadai12_Realm.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		470E76B026A5474D00A4C13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		470E76B326A5474D00A4C13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		470E76B526A5474D00A4C13A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		470E76BB26A549F800A4C13A /* Tax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax.swift; sourceTree = "<group>"; };
+		470E76BF26A54DA700A4C13A /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		BF7A9F432BA8EB0FEEEB6324 /* Pods-Kadai12-Realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai12-Realm.debug.xcconfig"; path = "Target Support Files/Pods-Kadai12-Realm/Pods-Kadai12-Realm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,9 +75,10 @@
 		470E76A626A5474C00A4C13A /* Kadai12-Realm */ = {
 			isa = PBXGroup;
 			children = (
+				470E76BE26A54D6600A4C13A /* Controller */,
+				470E76BD26A54D5800A4C13A /* Model */,
 				470E76A726A5474C00A4C13A /* AppDelegate.swift */,
 				470E76A926A5474C00A4C13A /* SceneDelegate.swift */,
-				470E76AB26A5474C00A4C13A /* ViewController.swift */,
 				470E76AD26A5474C00A4C13A /* Main.storyboard */,
 				470E76B026A5474D00A4C13A /* Assets.xcassets */,
 				470E76B226A5474D00A4C13A /* LaunchScreen.storyboard */,
@@ -82,13 +87,29 @@
 			path = "Kadai12-Realm";
 			sourceTree = "<group>";
 		};
+		470E76BD26A54D5800A4C13A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				470E76BB26A549F800A4C13A /* Tax.swift */,
+				470E76BF26A54DA700A4C13A /* DataRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		470E76BE26A54D6600A4C13A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				470E76AB26A5474C00A4C13A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DD6CCD98BA65FAB36F5A4F0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				BF7A9F432BA8EB0FEEEB6324 /* Pods-Kadai12-Realm.debug.xcconfig */,
 				275438D8A943FCF48241CC86 /* Pods-Kadai12-Realm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				470E76AC26A5474C00A4C13A /* ViewController.swift in Sources */,
+				470E76C026A54DA700A4C13A /* DataRepository.swift in Sources */,
+				470E76BC26A549F800A4C13A /* Tax.swift in Sources */,
 				470E76A826A5474C00A4C13A /* AppDelegate.swift in Sources */,
 				470E76AA26A5474C00A4C13A /* SceneDelegate.swift in Sources */,
 			);
