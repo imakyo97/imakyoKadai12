@@ -9,8 +9,6 @@ import UIKit
 
 class TaxCalcViewController: UIViewController, UITextFieldDelegate, TaxRateRepositoryDelegate {
     
-    
-    
     private let taxRateRepository = TaxRateRepository()
     private let priceCalculator = PriceCaluculator()
     
