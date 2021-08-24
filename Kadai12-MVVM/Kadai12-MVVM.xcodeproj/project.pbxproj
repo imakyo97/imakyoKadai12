@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4786DDF126D39D7100409285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDF026D39D7100409285 /* AppDelegate.swift */; };
 		4786DDF326D39D7100409285 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDF226D39D7100409285 /* SceneDelegate.swift */; };
-		4786DDF526D39D7100409285 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDF426D39D7100409285 /* ViewController.swift */; };
-		4786DDF826D39D7100409285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4786DDF626D39D7100409285 /* Main.storyboard */; };
 		4786DDFA26D39D7200409285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4786DDF926D39D7200409285 /* Assets.xcassets */; };
 		4786DDFD26D39D7200409285 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4786DDFB26D39D7200409285 /* LaunchScreen.storyboard */; };
+		4786DE0626D39ECB00409285 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DE0426D39ECB00409285 /* MainViewController.swift */; };
+		4786DE0726D39ECB00409285 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4786DE0526D39ECB00409285 /* MainViewController.xib */; };
+		4786DE0C26D3C27500409285 /* Tax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DE0B26D3C27500409285 /* Tax.swift */; };
+		4786DE0E26D3C3B400409285 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DE0D26D3C3B400409285 /* Calculation.swift */; };
+		4786DE1026D3C62F00409285 /* CalculationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DE0F26D3C62F00409285 /* CalculationViewModel.swift */; };
+		4786DE1326D4048600409285 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DE1226D4048600409285 /* DataRepository.swift */; };
 		4DA8DE50F3831445F0E52D12 /* Pods_Kadai12_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F690B60C6586DD751912997F /* Pods_Kadai12_MVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +24,15 @@
 		4786DDED26D39D7100409285 /* Kadai12-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadai12-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4786DDF026D39D7100409285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4786DDF226D39D7100409285 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4786DDF426D39D7100409285 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4786DDF726D39D7100409285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4786DDF926D39D7200409285 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4786DDFC26D39D7200409285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4786DDFE26D39D7200409285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4786DE0426D39ECB00409285 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4786DE0526D39ECB00409285 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4786DE0B26D3C27500409285 /* Tax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax.swift; sourceTree = "<group>"; };
+		4786DE0D26D3C3B400409285 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
+		4786DE0F26D3C62F00409285 /* CalculationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewModel.swift; sourceTree = "<group>"; };
+		4786DE1226D4048600409285 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		5EDAF8F7834FCE3F96C79848 /* Pods-Kadai12-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai12-MVVM.release.xcconfig"; path = "Target Support Files/Pods-Kadai12-MVVM/Pods-Kadai12-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		992DDD72E73B545B6ADDADD2 /* Pods-Kadai12-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadai12-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Kadai12-MVVM/Pods-Kadai12-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		F690B60C6586DD751912997F /* Pods_Kadai12_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kadai12_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +56,6 @@
 				992DDD72E73B545B6ADDADD2 /* Pods-Kadai12-MVVM.debug.xcconfig */,
 				5EDAF8F7834FCE3F96C79848 /* Pods-Kadai12-MVVM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,15 +80,51 @@
 		4786DDEF26D39D7100409285 /* Kadai12-MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				4786DE0A26D39F1100409285 /* Model */,
+				4786DE0926D39F0600409285 /* ViewModel */,
+				4786DE0826D39EFA00409285 /* View */,
 				4786DDF026D39D7100409285 /* AppDelegate.swift */,
 				4786DDF226D39D7100409285 /* SceneDelegate.swift */,
-				4786DDF426D39D7100409285 /* ViewController.swift */,
-				4786DDF626D39D7100409285 /* Main.storyboard */,
 				4786DDF926D39D7200409285 /* Assets.xcassets */,
 				4786DDFB26D39D7200409285 /* LaunchScreen.storyboard */,
 				4786DDFE26D39D7200409285 /* Info.plist */,
 			);
 			path = "Kadai12-MVVM";
+			sourceTree = "<group>";
+		};
+		4786DE0826D39EFA00409285 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4786DE0426D39ECB00409285 /* MainViewController.swift */,
+				4786DE0526D39ECB00409285 /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4786DE0926D39F0600409285 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4786DE1126D4046E00409285 /* DataRepository */,
+				4786DE0F26D3C62F00409285 /* CalculationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4786DE0A26D39F1100409285 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4786DE0D26D3C3B400409285 /* Calculation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4786DE1126D4046E00409285 /* DataRepository */ = {
+			isa = PBXGroup;
+			children = (
+				4786DE0B26D3C27500409285 /* Tax.swift */,
+				4786DE1226D4048600409285 /* DataRepository.swift */,
+			);
+			path = DataRepository;
 			sourceTree = "<group>";
 		};
 		A1D798A4E595065BCDAA8EA5 /* Frameworks */ = {
@@ -152,8 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4786DDFD26D39D7200409285 /* LaunchScreen.storyboard in Resources */,
+				4786DE0726D39ECB00409285 /* MainViewController.xib in Resources */,
 				4786DDFA26D39D7200409285 /* Assets.xcassets in Resources */,
-				4786DDF826D39D7100409285 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,23 +249,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4786DDF526D39D7100409285 /* ViewController.swift in Sources */,
+				4786DE1026D3C62F00409285 /* CalculationViewModel.swift in Sources */,
+				4786DE0626D39ECB00409285 /* MainViewController.swift in Sources */,
+				4786DE0C26D3C27500409285 /* Tax.swift in Sources */,
 				4786DDF126D39D7100409285 /* AppDelegate.swift in Sources */,
 				4786DDF326D39D7100409285 /* SceneDelegate.swift in Sources */,
+				4786DE0E26D3C3B400409285 /* Calculation.swift in Sources */,
+				4786DE1326D4048600409285 /* DataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4786DDF626D39D7100409285 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4786DDF726D39D7100409285 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4786DDFB26D39D7200409285 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
